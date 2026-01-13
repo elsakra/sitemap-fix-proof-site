@@ -1,0 +1,100 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Services from '../components/Services.astro';
+import About from '../components/About.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="Southaven Internal Medicine - Board Certified Internal Medicine Physicians"
+  description="Southaven Internal Medicine has been providing comprehensive internal medicine care since 1996. Board certified physicians offering preventative care, health screenings, and chronic disease management in Southaven, MS."
+>
+  <Header />
+  
+  <main>
+    <Hero 
+      title="Dedicated to Our Patients Since 1996"
+      subtitle="Southaven Internal Medicine provides comprehensive internal medicine care with board certified physicians focused on preventative medicine, health screenings, and helping our community achieve optimal health."
+      backgroundImage="https://res.cloudinary.com/dil14r8je/image/upload/v1768323579/auto-site-builder/sitemap-fix-proof/image_1.jpg"
+      ctaText="Call us today at (662) 349-1999"
+      ctaLink="tel:6623491999"
+    />
+    
+    <Services />
+    
+    <About />
+    
+    <!-- Quick Access Section -->
+    <section class="section-padding bg-teal-50">
+      <div class="container-custom">
+        <div class="text-center mb-12 animate-section">
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-6">
+            Quick Access
+          </h2>
+          <p class="text-xl text-slate-600 max-w-3xl mx-auto">
+            Get the care you need with convenient access to our services
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-cards">
+          <!-- Pre-Registration -->
+          <div class="card p-8 text-center">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-800 mb-4">Pre-Register</h3>
+            <p class="text-slate-600 mb-6">
+              Save time on your visit by completing your registration forms online before you arrive.
+            </p>
+            <a href="#" class="btn-primary">
+              Pre-Register Now
+            </a>
+          </div>
+          
+          <!-- Patient Portal -->
+          <div class="card p-8 text-center">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-slate-800 mb-4">Patient Portal</h3>
+            <p class="text-slate-600 mb-6">
+              Access your test results, request refills, and view your health records securely online.
+            </p>
+            <a href="/patient-portal" class="btn-primary">
+              Access Portal
+            </a>
+          </div>
+          
+          <!-- Facebook -->
+          <div class="card p-8 text-center">
+            <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+              <img 
+                src="https://res.cloudinary.com/dil14r8je/image/upload/v1768323579/auto-site-builder/sitemap-fix-proof/image_3.png" 
+                alt="Facebook" 
+                class="w-8 h-8"
+              />
+            </div>
+            <h3 class="text-xl font-semibold text-slate-800 mb-4">Follow Us</h3>
+            <p class="text-slate-600 mb-6">
+              Stay connected with us on Facebook for health tips, updates, and practice news.
+            </p>
+            <a href="https://www.facebook.com/southaveninternalmedicine" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              Follow on Facebook
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <Contact />
+  </main>
+  
+  <Footer />
+</Layout>

@@ -1,0 +1,67 @@
+---
+// No props needed for this component
+---
+
+<header class="navbar fixed top-0 left-0 right-0 z-50 bg-white shadow-sm transition-all duration-300">
+  <div class="container-custom">
+    <div class="flex items-center justify-between py-4">
+      <!-- Logo -->
+      <a href="/" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+        <img 
+          src="https://res.cloudinary.com/dil14r8je/image/upload/v1768323578/auto-site-builder/sitemap-fix-proof/image_0.jpg" 
+          alt="Southaven Internal Medicine Logo" 
+          class="w-12 h-12 rounded-full object-cover"
+        />
+        <div>
+          <h1 class="text-xl font-bold text-slate-800">Southaven Internal Medicine</h1>
+          <p class="text-sm text-slate-600">est. 1996</p>
+        </div>
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-center space-x-8">
+        <a href="/" class="text-slate-700 hover:text-teal-600 font-medium transition-colors">Home</a>
+        <a href="/patient-portal" class="text-slate-700 hover:text-teal-600 font-medium transition-colors">Patient Portal</a>
+        <a href="/contact-us" class="text-slate-700 hover:text-teal-600 font-medium transition-colors">Hours & Location</a>
+        <a href="/meet-our-team" class="text-slate-700 hover:text-teal-600 font-medium transition-colors">Meet our Providers</a>
+        <a href="/faq" class="text-slate-700 hover:text-teal-600 font-medium transition-colors">FAQ</a>
+      </nav>
+      
+      <!-- Contact Info & CTA -->
+      <div class="hidden lg:flex items-center space-x-6">
+        <div class="text-right">
+          <p class="text-sm font-semibold text-slate-800">P: (662) 349-1999</p>
+          <p class="text-sm text-slate-600">F: (662) 349-9734</p>
+        </div>
+        <a href="tel:6623491999" class="btn-primary">
+          Call Now
+        </a>
+      </div>
+      
+      <!-- Mobile Menu Button -->
+      <button class="lg:hidden mobile-menu-button p-2 rounded-md hover:bg-slate-100 transition-colors">
+        <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu lg:hidden bg-white border-t border-slate-200 py-4">
+      <nav class="flex flex-col space-y-4">
+        <a href="/" class="text-slate-700 hover:text-teal-600 font-medium transition-colors px-4 py-2">Home</a>
+        <a href="/patient-portal" class="text-slate-700 hover:text-teal-600 font-medium transition-colors px-4 py-2">Patient Portal</a>
+        <a href="/contact-us" class="text-slate-700 hover:text-teal-600 font-medium transition-colors px-4 py-2">Hours & Location</a>
+        <a href="/meet-our-team" class="text-slate-700 hover:text-teal-600 font-medium transition-colors px-4 py-2">Meet our Providers</a>
+        <a href="/faq" class="text-slate-700 hover:text-teal-600 font-medium transition-colors px-4 py-2">FAQ</a>
+        <div class="px-4 py-2 border-t border-slate-200 mt-4">
+          <p class="text-sm font-semibold text-slate-800 mb-1">P: (662) 349-1999</p>
+          <p class="text-sm text-slate-600 mb-3">F: (662) 349-9734</p>
+          <a href="tel:6623491999" class="btn-primary inline-block">
+            Call Now
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>

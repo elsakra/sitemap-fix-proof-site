@@ -1,0 +1,51 @@
+---
+export interface Props {
+  title: string;
+  subtitle: string;
+  backgroundImage?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  showCta?: boolean;
+}
+
+const { 
+  title, 
+  subtitle, 
+  backgroundImage = 'https://res.cloudinary.com/dil14r8je/image/upload/v1768323579/auto-site-builder/sitemap-fix-proof/image_1.jpg',
+  ctaText = 'Call us today at (662) 349-1999',
+  ctaLink = 'tel:6623491999',
+  showCta = true
+} = Astro.props;
+---
+
+<section class="relative min-h-[600px] flex items-center justify-center bg-cover bg-center" style={`background-image: url('${backgroundImage}')`}>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  
+  <!-- Content -->
+  <div class="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
+    <h1 class="hero-title text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+      {title}
+    </h1>
+    <p class="hero-subtitle text-xl md:text-2xl mb-8 text-slate-200 max-w-3xl mx-auto leading-relaxed">
+      {subtitle}
+    </p>
+    {showCta && (
+      <div class="hero-cta flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href={ctaLink} class="btn-primary text-lg px-8 py-4">
+          {ctaText}
+        </a>
+        <a href="/patient-portal" class="btn-secondary text-lg px-8 py-4 bg-white/10 border-white/30 text-white hover:bg-white hover:text-slate-800">
+          Patient Portal
+        </a>
+      </div>
+    )}
+  </div>
+  
+  <!-- Scroll Indicator -->
+  <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+  </div>
+</section>
